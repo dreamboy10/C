@@ -42,5 +42,27 @@ int main(void) {
 	res4 = (i > j) ? i : j; // i와 j 중에 큰 값이 res4에 저장
 	printf("큰 값 : %d\n", res4);
 
+	int k = 10; // 비트열 00000000 00000000 00000000 00001010
+	int l = 12; // 비트열 00000000 00000000 00000000 00001100
+
+	printf("k & l : %d\n", k & l);
+	printf("k ^ l : %d\n", k ^ l);
+	printf("k | l : %d\n", k | l);
+	printf("~k : %d\n", ~k);
+	printf("k << 1 : %d\n", k << 1);
+	printf("k >> 2 : %d\n", k >> 2);
+
+	int m = 10, n = 5;
+	int res5;
+
+	res5 = m / n * 2; // 우선순위가 같으므로 왼쪽부터 차례로 연산
+	printf("res5 = %d\n", res5);
+	res5 = ++m * 3; // m의 값을 1 증가시키고 3을 곱한다.
+	printf("res5 = %d\n", res5);
+	res5 = m > n && m != 5; // m > n의 결과와 m != 5의 결과를 &&로 연산
+	printf("res5 = %d\n", res5);
+	res5 = m % 3 == 0; // m % 3의 값이 0과 같은지 확인
+	printf("res5 = %d\n", res5);
+
 	return 0;
 }
