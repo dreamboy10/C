@@ -1,7 +1,7 @@
 #include <stdio.h>
-/* #include <string.h> // strcpy 함수를 사용하기 위해 인클루드함 */
+#include <string.h> // strncpy 함수 사용을 위한 헤더 파일 포함 */
 
-char *my_strcpy(char *pd, char *ps); // 함수 선언
+/* char *my_strcpy(char *pd, char *ps); */ // 함수 선언
 
 int main(void) {
 	/*
@@ -24,6 +24,7 @@ int main(void) {
 	printf("바뀐 문자열 : %s\n", str1);
 	*/
 
+	/*
 	char str[80] = "strawberry";
 
 	printf("바꾸기 전 문자열 : %s\n", str);
@@ -31,10 +32,17 @@ int main(void) {
 	printf("바꾼 후 문자열 : %s\n", str);
 	printf("다른 문자열 대입 : %s\n", my_strcpy(str, "kiwi"));
 	// 반환값으로 출력
+	*/
+
+	char str[20] = "mango tree"; // 배열 초기화
+
+	strncpy(str, "apple-pie", 5); // "apple-pie"에서 다섯 문자만 복사
+	printf("%s\n", str); // 복사받은 문자열 출력
 
 	return 0;
 }
 
+/*
 char *my_strcpy(char *pd, char *ps) { 
 	// 복사받을 곳(pd)과 복사할 곳(ps)의 포인터
 
@@ -52,3 +60,4 @@ char *my_strcpy(char *pd, char *ps) {
 	return po; // 복사가 끝난 저장 공간의 시작 주소 반환
 
 }
+*/
