@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h> // strlen 함수 사용을 위한 헤더 파일 포함 */
+#include <string.h> 
 
 /* char *my_strcpy(char *pd, char *ps); */ // 함수 선언
 
@@ -41,6 +41,7 @@ int main(void) {
 	printf("%s\n", str); // 복사받은 문자열 출력
 	*/
 
+	/**
 	char str1[80], str2[80]; // 두 문자열을 입력할 배열
 	char *resp; // 문자열이 긴 배열을 선택할 포인터
 
@@ -53,6 +54,37 @@ int main(void) {
 		resp = str2; // 두 번째 배열이 긴 경우 선택
 		printf("이름이 긴 과일은 : %s\n", resp); 
 		// 선택된 배열의 문자열 출력
+	}
+	*/
+
+	/*
+	char str[80] = "straw"; // 문자열 초기화
+
+	strcat(str, "berry"); // str 배열에 문자열 붙이기
+	printf("%s\n", str);
+	strncat(str, "piece", 3); // str 배열에 3개의 문자 붙이기
+	printf("%s\n", str);
+	*/
+
+	char str1[80] = "pear";
+	char str2[80] = "peach";
+
+	printf("사전에 나중에 나오는 과일 이름 : ");
+	
+	if (strcmp(str1, str2) > 0) { 
+		// str1이 str2보다 크면(사전에 나중에 나오면)
+		printf("%s\n", str1); // str1 출력
+	} else {
+		printf("%s\n", str2); // 그렇지 않으면 str2 출력
+	}
+
+	printf("앞에서 3개의 문자를 비교하면 ");
+
+	if (strncmp(str1, str2, 3) == 0) {
+		// 앞에서 3개의 문자가 같으면 0 반환
+		printf("같다.\n");
+	} else {
+		printf("다르다.\n");
 	}
 
 	return 0;
