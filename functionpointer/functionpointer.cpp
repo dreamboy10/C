@@ -2,10 +2,12 @@
 
 /* int sum(int, int); // 함수 선언 */
 
+/*
 void func(int (*fp)(int, int)); // 함수 포인터를 매개변수로 갖는 함수
 int sum(int a, int b); // 두 정수를 더하는 함수
 int mul(int a, int b); // 두 정수를 곱하는 함수
 int max(int a, int b); // 두 정수 중에 큰 값을 구하는 함수
+*/
 
 int main(void) {
 	/*
@@ -17,6 +19,7 @@ int main(void) {
 	printf("result : %d\n", res); // 반환값 출력
 	*/
 
+	/*
 	int sel; // 선택된 메뉴 번호를 저장할 변수
 
 	printf("1. 두 정수의 합\n"); // 메뉴 출력
@@ -34,6 +37,17 @@ int main(void) {
 		case 3: func(max); // 3이면 func에 큰 값 구하는 기능 추가
 	    break;
 	}
+	*/
+
+	int a = 10; // int형 변수
+	double b = 3.5; // double형 변수
+	void *vp; // void 포인터
+
+	vp = &a; // int형 변수의 주소 저장
+	printf("a : %d\n", * (int *)vp);
+
+	vp = &b; // double형 변수의 주소 저장
+	printf("b : %.1lf\n", * (double *)vp);
 
 	return 0;
 }
@@ -44,6 +58,7 @@ int sum(int a, int b) {
 }
 */
 
+/*
 void func(int (*fp)(int, int)) {
 	int a, b; // 두 정수를 저장할 변수
 	int res; // 함수의 반환값을 저장할 변수
@@ -69,3 +84,4 @@ int max(int a, int b) { // 큰 값을 구하는 함수
 		return b;
 	}
 }
+*/
