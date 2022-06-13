@@ -1,2 +1,1 @@
-monkey likes
-banana
+10
