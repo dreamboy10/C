@@ -21,5 +21,11 @@
     <ClCompile Include="divcomfile2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="divcomfile3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="divcomfile4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

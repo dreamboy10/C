@@ -78,6 +78,8 @@
   <ItemGroup>
     <ClCompile Include="divcomfile.cpp" />
     <ClCompile Include="divcomfile2.cpp" />
+    <ClCompile Include="divcomfile3.cpp" />
+    <ClCompile Include="divcomfile4.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
