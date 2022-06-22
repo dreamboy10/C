@@ -1,21 +1,15 @@
-﻿빌드 시작: 2022-06-22 오전 2:09:06
+﻿빌드 시작: 2022-06-23 오전 1:41:39
      1>2 노드의 "C:\공부\2. 강의\C\divcomfile\divcomfile.vcxproj" 프로젝트(Build 대상)입니다.
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt divcomfile.cpp divcomfile3.cpp divcomfile4.cpp
-         divcomfile4.cpp
-         divcomfile3.cpp
-     1>c:\공부\2. 강의\c\divcomfile\divcomfile3.cpp(11): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(283) : 'scanf' 선언을 참조하십시오.
-         divcomfile.cpp
-         코드를 생성하고 있습니다...
-       Link:
+     1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\공부\2. 강의\C\divcomfile\Debug\divcomfile.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\공부\2. 강의\C\divcomfile\Debug\divcomfile.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\공부\2. 강의\C\divcomfile\Debug\divcomfile.lib" /MACHINE:X86 Debug\divcomfile.obj
          Debug\divcomfile2.obj
          Debug\divcomfile3.obj
          Debug\divcomfile4.obj
-         divcomfile.vcxproj -> C:\공부\2. 강의\C\divcomfile\Debug\divcomfile.exe
-     1>"C:\공부\2. 강의\C\divcomfile\divcomfile.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
+         Debug\main.obj
+     1>main.obj : error LNK2005: _main이(가) divcomfile.obj에 이미 정의되어 있습니다.
+     1>C:\공부\2. 강의\C\divcomfile\Debug\divcomfile.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.
+     1>"C:\공부\2. 강의\C\divcomfile\divcomfile.vcxproj" 프로젝트를 빌드했습니다(Build 대상). - 실패
 
-빌드했습니다.
+빌드하지 못했습니다.
 
-경과 시간: 00:00:05.97
+경과 시간: 00:00:01.64

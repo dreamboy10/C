@@ -11,6 +11,7 @@ void print_data(double); // 출력 함수
 int cnt = 0; // 입력한 양수의 수 누적
 static int tot = 0; // 입력한 양수의 합
 
+
 int main(void) {
 	/*
 	int a, b;
@@ -29,6 +30,7 @@ int main(void) {
 
 	return 0;
 }
+
 
 void print_data(double avg) {
 	printf("입력한 양수의 개수 : %d\n", cnt);
