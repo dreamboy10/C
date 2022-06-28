@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <stdarg.h>
+
+double my_sum(const char *format, ...); // 가변 인수 함수의 선언
 
 int main(void) {
 	/*
@@ -18,6 +19,7 @@ int main(void) {
 	printf("%d:%d:%d\n", pt -> tm_hour, pt -> tm_min, pt -> tm_sec);
 	*/
 
+	/*
 	int lotto[6]; // 6개의 난수를 저장할 배열
 	int num, i, j;
 
@@ -41,6 +43,31 @@ int main(void) {
 	for (i = 0; i < 6; i++) {
 		printf("%5d", lotto[i]); // lotto 배열의 값 출력
 	}
+	*/
+
+	double res;
+
+	res = my_sum("ddff", 1, 2, 3.0, 4.5); // 정수 2개 실수 2개를 가변인수로 전달
+	printf("res : %.1lf\n", res);
 
 	return 0;
+}
+
+double my_sum(const char *format, ...) { // 고정인수는 문자열, 나머지는 가변인수
+	va_list pa; // 가변 인수의 시작 위치를 저장하는 포인터
+	double tot = 0;
+
+	va_start(pa, format); // pa가 고정인수 다음 위치를 가리키도록 설정
+
+	while (*format) { // 변환문자를 모두 처리할 동안 반복
+		if (*format == 'd') { // 변환문자가 d면
+			tot += va_arg(pa, int); // 인수를 정수로 변환
+		} else if (*format == 'f') { // 변환문자가 f면
+			tot += va_arg(pa, double); // 인수를 실수로 변환
+		}
+		format++; // 다음 변환문자로 이동
+	}
+	va_end(pa); // 정리 작업을 위한 매크로
+
+	return tot;
 }
